@@ -3,6 +3,6 @@ function speak(value) {
     return value;
 }
 var greeted = "Mostafa";
-var greeting = "Hello, ";
-var whatToSay = greeting + greeted;
+var greeting = "Hello";
+var whatToSay = greeting + ", " + greeted;
 speak(whatToSay);

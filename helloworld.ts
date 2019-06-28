@@ -4,7 +4,7 @@ function speak(value: string): string {
 }
 
 var greeted = "Mostafa";
-var greeting = "Hello, ";
-var whatToSay = greeting + greeted;
+var greeting = "Hello";
+var whatToSay = `${greeting}, ${greeted}`;
 
 speak(whatToSay);
