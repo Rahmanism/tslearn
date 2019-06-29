@@ -1,0 +1,17 @@
+class Employee {
+    constructor(name) {
+        this.employeeName = name;
+    }
+    greet() {
+        console.log(`Greetings ${this.employeeName}!`);
+    }
+}
+let emp1 = new Employee('Mostafa');
+emp1.greet();
+class Manager extends Employee {
+    constructor(name) {
+        super(name);
+    }
+}
+let mgr1 = new Manager('Ali');
+mgr1.greet();
