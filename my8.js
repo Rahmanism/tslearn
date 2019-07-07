@@ -14,6 +14,7 @@ console.log(mostafa);
 function register(person) {
     console.log(person.name + " " + person.family);
 }
+console.log(Gender[mostafa.gender]);
 register(mostafa);
 var Days;
 (function (Days) {
@@ -29,3 +30,10 @@ var day = Days.Sunday;
 console.log(day);
 day = Days.Tuesday;
 console.log(day);
+var Colors;
+(function (Colors) {
+    Colors["Red"] = "#ff3333";
+    Colors["Green"] = "#33ff33";
+    Colors["Blue"] = "#3333ff";
+})(Colors || (Colors = {}));
+console.log(Colors.Blue);

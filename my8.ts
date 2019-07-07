@@ -25,6 +25,8 @@ function register(person: IPerseon): void {
     console.log(person.name + " " + person.family);
 }
 
+console.log(Gender[mostafa.gender]);
+
 register(mostafa);
 
 interface IPerseonService {
@@ -33,8 +35,6 @@ interface IPerseonService {
     getAll(): IPerseon[];
     getById(personId: number): IPerseon;
 }
-
-
 
 enum Days {
     Saturday = 1,
@@ -50,3 +50,11 @@ var day = Days.Sunday;
 console.log(day);
 day = Days.Tuesday;
 console.log(day);
+
+enum Colors {
+    Red = "#ff3333",
+    Green = "#33ff33",
+    Blue = "#3333ff"
+}
+
+console.log(Colors.Blue);
