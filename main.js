@@ -1,10 +1,8 @@
-"use strict";
-exports.__esModule = true;
-var message = "Hello World!";
+let message = "Hello World!";
 console.log(message);
-var myList = ['Ali', 12];
-var fontStyle = 'Bold';
-var anyVar = 'Hi';
+let myList = ['Ali', 12];
+let fontStyle = 'Bold';
+let anyVar = 'Hi';
 console.log(anyVar.name);
 console.log(anyVar.toUpperCase());
 if ('abc') {
@@ -13,6 +11,6 @@ if ('abc') {
 if (!!'abc') {
     console.log('TRUE with truthy value!');
 }
-var multiTypeVar;
+let multiTypeVar;
 multiTypeVar = 'string value';
 multiTypeVar = false;
