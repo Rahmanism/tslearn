@@ -37,21 +37,3 @@ function addition(x, y) {
 console.log(addition("5", "7"));
 console.log(addition(6, 8));
 console.log(addition(["123", 123], ["A", "B"]));
-function addition2(x, y) {
-    if (typeof x == "number" && typeof y == "number") {
-        // return (x + y).toString();
-        return x + y;
-    }
-    else if (typeof x == "string" && typeof y == "string") {
-        return x + " " + y;
-    }
-    else if (x instanceof Array && y instanceof Array) {
-        return x.concat(y);
-    }
-    else {
-        return "No suitable input!";
-    }
-}
-console.log(addition2("5", "7"));
-console.log(addition2(6, 8));
-console.log(addition2(["123", 123], ["A", "B"]));
