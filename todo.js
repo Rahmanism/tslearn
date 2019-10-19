@@ -4,13 +4,13 @@ var TodoState;
     TodoState[TodoState["Completed"] = 1] = "Completed";
     TodoState[TodoState["Deleted"] = 2] = "Deleted";
 })(TodoState || (TodoState = {}));
-var Smart13Todo = /** @class */ (function () {
-    function Smart13Todo(name, state) {
+var SmartTodo = /** @class */ (function () {
+    function SmartTodo(name, state) {
         if (state === void 0) { state = TodoState.Active; }
         this.name = name;
         this._state = state;
     }
-    Object.defineProperty(Smart13Todo.prototype, "state", {
+    Object.defineProperty(SmartTodo.prototype, "state", {
         get: function () {
             return this._state;
         },
@@ -27,9 +27,9 @@ var Smart13Todo = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    return Smart13Todo;
+    return SmartTodo;
 }());
-var todo13 = new Smart13Todo("Test");
+var todo13 = new SmartTodo("Test");
 console.log(todo13.state);
 todo13.state = TodoState.Completed;
 console.log(todo13.state);

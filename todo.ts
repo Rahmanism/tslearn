@@ -1,10 +1,15 @@
+interface ITodo {
+    name: string;
+    _state: TodoState;
+}
+
 enum TodoState {
     Active, 
     Completed,
     Deleted
 }
 
-class Smart13Todo {
+class SmartTodo implements ITodo {
     name: string;
     _state: TodoState;
 
@@ -30,7 +35,7 @@ class Smart13Todo {
     }
 }
 
-let todo13 = new Smart13Todo("Test");
+let todo13 = new SmartTodo("Test");
 console.log(todo13.state);
 todo13.state = TodoState.Completed;
 console.log(todo13.state);
