@@ -13,7 +13,7 @@ class Person {
     }
 }
 
-function register1(person: Person) {
+function register2(person: Person) {
     console.log(person.name +
         " " + person.family);
 }
@@ -21,7 +21,7 @@ function register1(person: Person) {
 var m = new Person("Mostafa", "Rahmani");
 m.name = "Ali";
 // m.family = "Rahmani";
-register1(m);
+register2(m);
 console.log(m.fullName());
 
 interface IPer {

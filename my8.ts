@@ -58,3 +58,4 @@ enum Colors {
 }
 
 console.log(Colors.Blue);
+console.log(Days[42]);

@@ -37,3 +37,4 @@ var Colors;
     Colors["Blue"] = "#3333ff";
 })(Colors || (Colors = {}));
 console.log(Colors.Blue);
+console.log(Days[42]);
