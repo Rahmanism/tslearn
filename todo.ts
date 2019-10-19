@@ -1,4 +1,4 @@
-enum Todo13State {
+enum TodoState {
     Active, 
     Completed,
     Deleted
@@ -6,9 +6,9 @@ enum Todo13State {
 
 class Smart13Todo {
     name: string;
-    _state: Todo13State;
+    _state: TodoState;
 
-    constructor(name: string, state: Todo13State = Todo13State.Active) {
+    constructor(name: string, state: TodoState = TodoState.Active) {
         this.name = name;
         this._state = state;
     }
@@ -17,11 +17,11 @@ class Smart13Todo {
         return this._state;
     }
 
-    set state(newState: Todo13State) {
-        if (newState == Todo13State.Completed) {
+    set state(newState: TodoState) {
+        if (newState == TodoState.Completed) {
             let canBeCompleted = 
-                this._state == Todo13State.Active ||
-                this._state == Todo13State.Deleted;
+                this._state == TodoState.Active ||
+                this._state == TodoState.Deleted;
             if (!canBeCompleted) {
                 throw new Error("The completed item can't be completed again!");
             }
@@ -32,7 +32,7 @@ class Smart13Todo {
 
 let todo13 = new Smart13Todo("Test");
 console.log(todo13.state);
-todo13.state = Todo13State.Completed;
+todo13.state = TodoState.Completed;
 console.log(todo13.state);
-todo13.state = Todo13State.Completed;
+todo13.state = TodoState.Completed;
 

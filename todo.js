@@ -1,12 +1,12 @@
-var Todo13State;
-(function (Todo13State) {
-    Todo13State[Todo13State["Active"] = 0] = "Active";
-    Todo13State[Todo13State["Completed"] = 1] = "Completed";
-    Todo13State[Todo13State["Deleted"] = 2] = "Deleted";
-})(Todo13State || (Todo13State = {}));
+var TodoState;
+(function (TodoState) {
+    TodoState[TodoState["Active"] = 0] = "Active";
+    TodoState[TodoState["Completed"] = 1] = "Completed";
+    TodoState[TodoState["Deleted"] = 2] = "Deleted";
+})(TodoState || (TodoState = {}));
 var Smart13Todo = /** @class */ (function () {
     function Smart13Todo(name, state) {
-        if (state === void 0) { state = Todo13State.Active; }
+        if (state === void 0) { state = TodoState.Active; }
         this.name = name;
         this._state = state;
     }
@@ -15,9 +15,9 @@ var Smart13Todo = /** @class */ (function () {
             return this._state;
         },
         set: function (newState) {
-            if (newState == Todo13State.Completed) {
-                var canBeCompleted = this._state == Todo13State.Active ||
-                    this._state == Todo13State.Deleted;
+            if (newState == TodoState.Completed) {
+                var canBeCompleted = this._state == TodoState.Active ||
+                    this._state == TodoState.Deleted;
                 if (!canBeCompleted) {
                     throw new Error("The completed item can't be completed again!");
                 }
@@ -31,6 +31,6 @@ var Smart13Todo = /** @class */ (function () {
 }());
 var todo13 = new Smart13Todo("Test");
 console.log(todo13.state);
-todo13.state = Todo13State.Completed;
+todo13.state = TodoState.Completed;
 console.log(todo13.state);
-todo13.state = Todo13State.Completed;
+todo13.state = TodoState.Completed;
