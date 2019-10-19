@@ -68,9 +68,6 @@ var TodoStateChanger = /** @class */ (function () {
     function TodoStateChanger(newState) {
         this.newState = newState;
     }
-    TodoStateChanger.prototype.canChangeState = function (todo) {
-        return !!todo;
-    };
     TodoStateChanger.prototype.changeState = function (todo) {
         if (this.canChangeState(todo)) {
             todo.state = this.newState;
@@ -85,7 +82,7 @@ var ChangeTodoToComplete = /** @class */ (function (_super) {
         return _super.call(this, TodoState.Completed) || this;
     }
     ChangeTodoToComplete.prototype.canChangeState = function (todo) {
-        return _super.prototype.canChangeState.call(this, todo) &&
+        return !!todo &&
             (todo.state == TodoState.Active || todo.state == TodoState.Deleted);
     };
     return ChangeTodoToComplete;
