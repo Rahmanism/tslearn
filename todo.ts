@@ -1,6 +1,6 @@
 interface ITodo {
     name: string;
-    _state: TodoState;
+    state: TodoState;
 }
 
 enum TodoState {
@@ -62,7 +62,7 @@ class Todo implements ITodo {
 }
 
 abstract class TodoStateChanger {
-    constructor(private newState: TodoState) { }
+    constructor(protected newState: TodoState) { }
 
     abstract canChangeState(todo: Todo): boolean;
 
@@ -86,11 +86,39 @@ class ChangeTodoToComplete extends TodoStateChanger {
     }
 }
 
+class TodoService {
+    private static _lastId: number = 0;
+
+    constructor(private todos: ITodo[]) {}
+
+    static getNextId() {
+        return (TodoService._lastId += 1);
+    }
+
+    private get nextId() {
+        return TodoService.getNextId();
+    }
+
+    private set nextId(nextId) {
+        TodoService._lastId = nextId - 1;
+    }
+
+    public add(todo: ITodo) {
+        var newId = this.nextId;
+    }
+
+    private getAll() {
+        return this.todos;
+    }
+}
+
+
 let todoCompleteTest = new ChangeTodoToComplete();
 
 // let todo13 = new SmartTodo("Test");
-// console.log(todo13.state);
-// todo13.state = TodoState.Completed;
-// console.log(todo13.state);
+let todoTest = new Todo("Test");
+console.log(todoTest.state);
+todoTest.state = TodoState.Completed;
+console.log(todoTest.state);
 // todo13.state = TodoState.Completed;
 

@@ -87,9 +87,36 @@ var ChangeTodoToComplete = /** @class */ (function (_super) {
     };
     return ChangeTodoToComplete;
 }(TodoStateChanger));
+var TodoService = /** @class */ (function () {
+    function TodoService(todos) {
+        this.todos = todos;
+    }
+    TodoService.getNextId = function () {
+        return (TodoService._lastId += 1);
+    };
+    Object.defineProperty(TodoService.prototype, "nextId", {
+        get: function () {
+            return TodoService.getNextId();
+        },
+        set: function (nextId) {
+            TodoService._lastId = nextId - 1;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    TodoService.prototype.add = function (todo) {
+        var newId = this.nextId;
+    };
+    TodoService.prototype.getAll = function () {
+        return this.todos;
+    };
+    TodoService._lastId = 0;
+    return TodoService;
+}());
 var todoCompleteTest = new ChangeTodoToComplete();
 // let todo13 = new SmartTodo("Test");
-// console.log(todo13.state);
-// todo13.state = TodoState.Completed;
-// console.log(todo13.state);
+var todoTest = new Todo("Test");
+console.log(todoTest.state);
+todoTest.state = TodoState.Completed;
+console.log(todoTest.state);
 // todo13.state = TodoState.Completed;
