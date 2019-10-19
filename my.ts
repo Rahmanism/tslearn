@@ -17,13 +17,13 @@ function calculateAge(by: number): number {
 console.log(animal);
 animal.speak();
 
-function totalLength(x: (string | any[]), y: (string | any[])): number {
+function totalLength0(x: (string | any[]), y: (string | any[])): number {
     let total = x.length + y.length;
 
     return total;
 }
 
-console.log(totalLength(['4', 123, "Kamran"], '5'));
+console.log(totalLength0(['4', 123, "Kamran"], '5'));
 
 function addition(x: number, y: number): number;
 function addition(x: string, y: string): string;

@@ -14,11 +14,11 @@ function calculateAge(by) {
 }
 console.log(animal);
 animal.speak();
-function totalLength(x, y) {
+function totalLength0(x, y) {
     var total = x.length + y.length;
     return total;
 }
-console.log(totalLength(['4', 123, "Kamran"], '5'));
+console.log(totalLength0(['4', 123, "Kamran"], '5'));
 function addition(x, y) {
     if (typeof x == "number" && typeof y == "number") {
         // return (x + y).toString();
