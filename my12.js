@@ -1,5 +1,5 @@
-class Person12 {
-    constructor(name, family) {
+var Person12 = /** @class */ (function () {
+    function Person12(name, family) {
         this.fullName = function () {
             return this.name +
                 " " + this.family;
@@ -8,8 +8,9 @@ class Person12 {
         this.family = family;
         Person12.lastId++;
     }
-}
-Person12.lastId = 0;
+    Person12.lastId = 0;
+    return Person12;
+}());
 function register1(person) {
     console.log(person.name +
         " " + person.family);

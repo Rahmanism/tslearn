@@ -9,13 +9,13 @@ var animal = {
     }
 };
 function calculateAge(by) {
-    let today = new Date();
+    var today = new Date();
     return today.getFullYear() - by;
 }
 console.log(animal);
 animal.speak();
 function totalLength(x, y) {
-    let total = x.length + y.length;
+    var total = x.length + y.length;
     return total;
 }
 console.log(totalLength(['4', 123, "Kamran"], '5'));

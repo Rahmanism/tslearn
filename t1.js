@@ -1,4 +1,4 @@
 var firstName = "Mostafa";
 var lastName = "Rahmani";
-let fullName = firstName + " " + lastName;
+var fullName = firstName + " " + lastName;
 console.log(fullName);
