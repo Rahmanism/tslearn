@@ -1,3 +1,6 @@
+import ITodo = TodoApp.Model.ITodo;
+import TodoState = TodoApp.Model.TodoState;
+
 abstract class TodoStateChanger {
     constructor(protected newState: TodoState) { }
 

@@ -1,3 +1,5 @@
+import ITodoService = TodoApp.DataAccess.ITodoService;
+
 interface IIdGenerator {
     nextId: number;
 }
