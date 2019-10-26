@@ -1,9 +1,12 @@
 // if we don't use namesapce, we import like this:
-// import Model = require("./model.ts");
+// import Model = require("./model");
 // import ITodo = Model.ITodo;
 
-namespace TodoApp.DataAccess {
-    import ITodo = TodoApp.Model.ITodo;
+import imTodoApp = require("./model");
+
+export namespace TodoApp.DataAccess {
+    import Model = imTodoApp.TodoApp.Model;
+    import ITodo = Model.ITodo;
 
     let _lastId: number = 0;
     function generateTodoId() {
@@ -17,7 +20,7 @@ namespace TodoApp.DataAccess {
         getById(todoId: number): ITodo;
     }
 
-    class TodoService implements ITodoService {
+    export class TodoService implements ITodoService {
     
         constructor(private todos: ITodo[]) { }
     

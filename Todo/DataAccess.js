@@ -1,3 +1,8 @@
+"use strict";
+// if we don't use namesapce, we import like this:
+// import Model = require("./model");
+// import ITodo = Model.ITodo;
+Object.defineProperty(exports, "__esModule", { value: true });
 var TodoApp;
 (function (TodoApp) {
     var DataAccess;
@@ -34,5 +39,6 @@ var TodoApp;
             };
             return TodoService;
         }());
+        DataAccess.TodoService = TodoService;
     })(DataAccess = TodoApp.DataAccess || (TodoApp.DataAccess = {}));
-})(TodoApp || (TodoApp = {}));
+})(TodoApp = exports.TodoApp || (exports.TodoApp = {}));

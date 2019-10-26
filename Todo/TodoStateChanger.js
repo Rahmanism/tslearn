@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,7 +12,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var TodoState = TodoApp.Model.TodoState;
+Object.defineProperty(exports, "__esModule", { value: true });
+var imTodoApp = require("./model");
+var TodoState = imTodoApp.TodoApp.Model.TodoState;
 var TodoStateChanger = /** @class */ (function () {
     function TodoStateChanger(newState) {
         this.newState = newState;

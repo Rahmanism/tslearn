@@ -1,5 +1,6 @@
-import ITodo = TodoApp.Model.ITodo;
-import TodoState = TodoApp.Model.TodoState;
+import imTodoApp = require('./model');
+import ITodo = imTodoApp.TodoApp.Model.ITodo;
+import TodoState = imTodoApp.TodoApp.Model.TodoState;
 
 abstract class TodoStateChanger {
     constructor(protected newState: TodoState) { }

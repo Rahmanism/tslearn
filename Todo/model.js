@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var TodoApp;
 (function (TodoApp) {
     var Model;
@@ -9,4 +11,4 @@ var TodoApp;
             TodoState[TodoState["Deleted"] = 2] = "Deleted";
         })(TodoState = Model.TodoState || (Model.TodoState = {}));
     })(Model = TodoApp.Model || (TodoApp.Model = {}));
-})(TodoApp || (TodoApp = {}));
+})(TodoApp = exports.TodoApp || (exports.TodoApp = {}));
