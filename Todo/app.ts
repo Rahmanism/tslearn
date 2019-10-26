@@ -2,9 +2,9 @@
 // import './DataAccess';
 
 //import * as TodoApp from "./model";
-import imTodoApp = require('./model');
+import imTodoApp = require('./model.js');
 import Model = imTodoApp.TodoApp.Model;
-import { TodoApp } from './DataAccess';
+import { TodoApp } from './DataAccess.js';
 
 
 var task1: Model.ITodo = {

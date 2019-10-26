@@ -1,11 +1,11 @@
 "use strict";
 // import * as tpm from 'TodoApp.Model';
 // import './DataAccess';
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 //import * as TodoApp from "./model";
-var imTodoApp = require("./model");
+var imTodoApp = require("./model.ts");
 var Model = imTodoApp.TodoApp.Model;
-var DataAccess_1 = require("./DataAccess");
+var DataAccess_ts_1 = require("./DataAccess.ts");
 var task1 = {
     id: 5,
     name: 'Test',
@@ -16,7 +16,7 @@ var task2 = {
     name: 'A completed task',
     state: Model.TodoState.Completed
 };
-var service = new DataAccess_1.TodoApp.DataAccess.TodoService([]);
+var service = new DataAccess_ts_1.TodoApp.DataAccess.TodoService([]);
 service.add(task1);
 service.add(task2);
 var tasks = service.getAll();

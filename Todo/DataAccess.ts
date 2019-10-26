@@ -2,7 +2,7 @@
 // import Model = require("./model");
 // import ITodo = Model.ITodo;
 
-import imTodoApp = require("./model");
+import imTodoApp = require("./model.js");
 
 export namespace TodoApp.DataAccess {
     import Model = imTodoApp.TodoApp.Model;
